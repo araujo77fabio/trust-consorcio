@@ -39,20 +39,35 @@ const CashFlow = () => {
             className="glass-card rounded-2xl shadow-[0_0_30px_rgba(217,119,6,0.1)] p-8 border border-white/5"
           >
             <h3 className="text-2xl font-bold text-white mb-6">Parcelas Mensais</h3>
-            <ResponsiveContainer width="100%" height={300}>
+            <div className="w-full h-[250px] sm:h-[300px] md:h-[300px] mt-8"><ResponsiveContainer width="100%" height="100%">
               <BarChart data={monthlyData}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
-                <XAxis dataKey="mes" stroke="#9ca3af" />
-                <YAxis stroke="#9ca3af" />
+          <defs>
+            <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#fbbf24" stopOpacity={0.8}/>
+              <stop offset="100%" stopColor="#d97706" stopOpacity={0.3}/>
+            </linearGradient>
+            <linearGradient id="greenGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#34d399" stopOpacity={0.8}/>
+              <stop offset="100%" stopColor="#059669" stopOpacity={0.3}/>
+            </linearGradient>
+            <linearGradient id="redGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#f87171" stopOpacity={0.8}/>
+              <stop offset="100%" stopColor="#dc2626" stopOpacity={0.3}/>
+            </linearGradient>
+          </defs>
+        
+                <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" vertical={false} />
+                <XAxis dataKey="mes" stroke="#9ca3af" tick={{ fill: '#9ca3af', fontSize: 13 }} tickLine={false} axisLine={false} />
+                <YAxis stroke="#9ca3af" tick={{ fill: '#9ca3af', fontSize: 13 }} tickLine={false} axisLine={false} />
                 <Tooltip
-                  contentStyle={{ backgroundColor: '#1f2937', border: '1px solid #374151', borderRadius: '8px', color: '#fff' }}
+                  contentStyle={{ backgroundColor: 'rgba(17, 17, 17, 0.9)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', color: '#fff', backdropFilter: 'blur(8px)', padding: '12px', boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.5)' }}
                   formatter={(value) => `R$ ${value.toLocaleString('pt-BR')}`}
                 />
                 <Legend />
-                <Bar dataKey="financiamento" fill="#ef4444" name="Financiamento" radius={[8, 8, 0, 0]} />
-                <Bar dataKey="consorcio" fill="#10b981" name="Consórcio" radius={[8, 8, 0, 0]} />
+                <Bar dataKey="financiamento" fill="url(#redGrad)" name="Financiamento" radius={[8, 8, 0, 0]} />
+                <Bar dataKey="consorcio" fill="url(#greenGrad)" name="Consórcio" radius={[8, 8, 0, 0]} />
               </BarChart>
-            </ResponsiveContainer>
+            </ResponsiveContainer></div>
 
             <div className="mt-6 grid grid-cols-2 gap-4">
               <div className="bg-red-900/20 rounded-lg p-4">

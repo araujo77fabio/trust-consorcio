@@ -94,7 +94,7 @@ const CTA = () => {
                 <Phone className="w-6 h-6 text-gold-400" />
               </div>
               <div className="text-sm text-gray-400 uppercase tracking-widest mb-2 font-medium">Ligue</div>
-              <div className="text-white font-bold text-lg">(11) 3000-0000</div>
+              <div className="text-white font-bold text-lg">(92) 98123-8565</div>
             </div>
 
             <div className="glass-card glass-card-hover rounded-xl p-8 text-center cursor-pointer">
@@ -102,7 +102,7 @@ const CTA = () => {
                 <MessageCircle className="w-6 h-6 text-green-400" />
               </div>
               <div className="text-sm text-gray-400 uppercase tracking-widest mb-2 font-medium">WhatsApp</div>
-              <div className="text-white font-bold text-lg">(11) 99999-9999</div>
+              <div className="text-white font-bold text-lg">(92) 98123-8565</div>
             </div>
 
             <div className="glass-card glass-card-hover rounded-xl p-8 text-center cursor-pointer">

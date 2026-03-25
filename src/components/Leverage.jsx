@@ -39,32 +39,47 @@ const Leverage = () => {
             className="glass-card rounded-2xl shadow-[0_0_30px_rgba(217,119,6,0.1)] p-8"
           >
             <h3 className="text-2xl font-bold text-white mb-6">Gráfico de Equilíbrio</h3>
-            <ResponsiveContainer width="100%" height={300}>
+            <div className="w-full h-[250px] sm:h-[300px] md:h-[300px] mt-8"><ResponsiveContainer width="100%" height="100%">
               <LineChart data={data}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+          <defs>
+            <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#fbbf24" stopOpacity={0.8}/>
+              <stop offset="100%" stopColor="#d97706" stopOpacity={0.3}/>
+            </linearGradient>
+            <linearGradient id="greenGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#34d399" stopOpacity={0.8}/>
+              <stop offset="100%" stopColor="#059669" stopOpacity={0.3}/>
+            </linearGradient>
+            <linearGradient id="redGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#f87171" stopOpacity={0.8}/>
+              <stop offset="100%" stopColor="#dc2626" stopOpacity={0.3}/>
+            </linearGradient>
+          </defs>
+        
+                <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" vertical={false} />
                 <XAxis dataKey="mes" stroke="#6b7280" />
                 <YAxis stroke="#6b7280" />
                 <Tooltip
-                  contentStyle={{ backgroundColor: '#fff', border: '1px solid #e5e7eb', borderRadius: '8px' }}
+                  contentStyle={{ backgroundColor: 'rgba(17, 17, 17, 0.9)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '12px', color: '#fff', backdropFilter: 'blur(8px)', padding: '12px', boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.5)' }}
                   formatter={(value) => `R$ ${value.toLocaleString('pt-BR')}`}
                 />
                 <Legend />
                 <Line
                   type="monotone"
                   dataKey="aluguel"
-                  stroke="#10b981"
+                  stroke="#34d399" strokeWidth={3}
                   strokeWidth={3}
                   name="Receita de Aluguel"
                 />
                 <Line
                   type="monotone"
                   dataKey="parcela"
-                  stroke="#ef4444"
+                  stroke="#f87171" strokeWidth={3}
                   strokeWidth={3}
                   name="Parcela Consórcio"
                 />
               </LineChart>
-            </ResponsiveContainer>
+            </ResponsiveContainer></div>
           </motion.div>
 
           <motion.div

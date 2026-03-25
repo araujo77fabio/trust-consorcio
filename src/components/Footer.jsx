@@ -33,26 +33,26 @@ const Footer = () => {
             <ul className="space-y-4 font-light text-gray-400">
               <li className="flex items-center space-x-3">
                 <span className="text-gold-400 font-medium">T:</span>
-                <span>(11) 3000-0000</span>
+                <span>(92) 98123-8565</span>
               </li>
               <li className="flex items-center space-x-3">
                 <span className="text-gold-400 font-medium">W:</span>
-                <span>(11) 99999-9999</span>
+                <span>(92) 98123-8565</span>
               </li>
               <li className="flex items-center space-x-3">
                 <span className="text-gold-400 font-medium">E:</span>
                 <span>contato@novacapu.com.br</span>
               </li>
-              <li className="flex items-center space-x-3 pt-2">
-                <span className="text-gold-400 font-medium">Endereço:</span>
-                <span>São Paulo, SP - Capital</span>
+              <li className="flex items-center space-x-3 pt-2 items-start">
+                <span className="text-gold-400 font-medium mt-1">Endereço:</span>
+                <span className="leading-tight">Av. Ayrão, 414<br/>Centro</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-white/5 pt-8 text-center text-gray-500 font-light text-sm flex flex-col md:flex-row justify-between items-center gap-4">
-          <p>© 2024 Novacapu Consórcios. Projetado para alto valor patrimonial.</p>
+          <p>© 2024 Novacapu Consórcios. Projetado para alto valor patrimonial. | CNPJ: 22.208.705/0001-31</p>
           <p className="bg-white/5 px-4 py-1.5 rounded-full inline-flex items-center">
             <ShieldIcon className="w-3 h-3 mr-2 text-gold-500" />
             Regulamentada pelo Banco Central do Brasil

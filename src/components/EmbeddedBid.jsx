@@ -39,7 +39,7 @@ const EmbeddedBid = () => {
             <h3 className="text-2xl font-bold text-white mb-6 text-center">
               Composição do Lance
             </h3>
-            <ResponsiveContainer width="100%" height={300}>
+            <div className="w-full h-[250px] sm:h-[300px] md:h-[300px] mt-8"><ResponsiveContainer width="100%" height="100%">
               <PieChart>
                 <Pie
                   data={data}
@@ -57,7 +57,7 @@ const EmbeddedBid = () => {
                 </Pie>
                 <Tooltip />
               </PieChart>
-            </ResponsiveContainer>
+            </ResponsiveContainer></div>
 
             <div className="mt-6 space-y-3">
               <div className="bg-blue-900/20 rounded-lg p-4 flex items-center justify-between">
