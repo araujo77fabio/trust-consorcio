@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200" fill="none">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#F4E5B0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8941E;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Hexagon Icon -->
+  <path d="M80 40 L120 20 L160 40 L160 80 L120 100 L80 80 Z" stroke="url(#goldGradient)" stroke-width="4" fill="none"/>
+  <path d="M100 50 L130 35 L145 50 L145 75 L130 90 L100 75 Z" stroke="url(#goldGradient)" stroke-width="3" fill="none"/>
+  <rect x="115" y="55" width="10" height="30" fill="url(#goldGradient)"/>
+  
+  <!-- PrimeTrust Text -->
+  <text x="180" y="85" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="url(#goldGradient)">PrimeTrust</text>
+</svg>
